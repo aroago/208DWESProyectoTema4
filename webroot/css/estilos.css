@@ -36,6 +36,7 @@ table, th,td {
 }
 table{
     margin-bottom: 60px;
+    text-align: center;
 }
 html{
     background-image: url("../img/fondo.jpg");
