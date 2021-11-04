@@ -3,7 +3,7 @@
 
 /* Introducción de datos dentro de la tabla creada */
     INSERT INTO Departamento(CodDepartamento,DescDepartamento,FechaBaja, VolumenNegocio) VALUES
-        ('INF', 'Departamento de informatica',1636011309, 80),
-        ('LEN', 'Departamento de lengua',1636010009, 1000),
-        ('ING', 'Departamento de ingles',1636011009, 3000),
-        ('MAT', 'Departamento de matematicas',1636011109, 2000),
+        ('INF', 'Departamento de informatica',null, 80),
+        ('LEN', 'Departamento de lengua',null, 1000),
+        ('ING', 'Departamento de ingles',null, 3000),
+        ('MAT', 'Departamento de matematicas',null, 2000)
