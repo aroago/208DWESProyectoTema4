@@ -6,7 +6,7 @@ Fecha Modificacion: 04/11/2021 -->
     <head>
         <meta charset="UTF-8">
         <meta name="author" content="aroaGraneroOmañas">
-        <title>ejercicio 1</title>
+        <title>ejercicio 1 MySQLi</title>
     </head>
     <body>
         <?php
