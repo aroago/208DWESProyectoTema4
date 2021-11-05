@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<!--Aroa Granero Omañas 
-Fecha Creacion: 04/11/2021
-Fecha Modificacion: 04/11/2021 -->
+
 <html>
     <head>
         <meta charset="UTF-8">
@@ -10,6 +8,11 @@ Fecha Modificacion: 04/11/2021 -->
     </head>
     <body>
         <?php
+         /*
+            * Ejercicio 01
+            * @author Aroa Granero Omañas
+            * Última modificación: 04/11/2021
+            */
         /* utilizando el método connect */
         $cConexionDB = new mysqli();
         $cConexionDB->connect('192.168.3.108', 'usuarioDAW208DBDepartamentos', 'P@ssw0rd', 'DAW208DBDepartamentos');
