@@ -13,9 +13,10 @@
             * @author Aroa Granero Omañas
             * Última modificación: 04/11/2021
             */
+        require_once '../config/confDBMySQL.php';
         /* utilizando el método connect */
         $cConexionDB = new mysqli();
-        $cConexionDB->connect('192.168.3.108', 'usuarioDAW208DBDepartamentos', 'P@ssw0rd', 'DAW208DBDepartamentos');
+        $cConexionDB->connect(HOST, USER, PASSWORD, DB);
         //Muestra de la conexión por pantalla
         echo "<h3>Valores de la conexion:</h3>";
         echo "<pre>";

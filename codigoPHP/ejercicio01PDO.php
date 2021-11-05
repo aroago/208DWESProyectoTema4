@@ -9,15 +9,14 @@
        <?php
             /*
             * Ejercicio 01
-            * @author Aroa Granero Omañas
-            * Última modificación: 04/11/2021
+            * @author Aroa Granero Omañasç
+            * Fecha Creacion:  04/11/2021
+            * Última modificación: 05/11/2021
             */
-            define("HOST", "192.168.3.108");
-            define("USUARIO", "usuarioDAW208DBDepartamentos");
-            define("CONTRASENYA", "P@ssw0rd");
-            define("BASEDEDATOS", "DAW208DBDepartamentos");
+             require_once '../config/confDBPDO.php';
+            
             //Establecimiento de la conexión 
-            $cConexionDB = new PDO('mysql:dbname='.BASEDEDATOS.';host='.HOST, USUARIO, CONTRASENYA);
+            $cConexionDB = new PDO(HOST, USER, PASSWORD);
 
             $attributes = array(
                 "AUTOCOMMIT", "ERRMODE", "CASE", "CLIENT_VERSION", "CONNECTION_STATUS",

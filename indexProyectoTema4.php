@@ -37,12 +37,12 @@ Fecha Modificacion: 13/10/2021 -->
                 </tr>
                 <tr>
                     <td>1.Conexión a la base de datos con la cuenta usuario y tratamiento de errores.</td>
-                    <td class="no_hecho">
-                        <a href="./codigoPHP/ejercicio01pdo.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>
+                    <td class="hecho">
+                        <a href="./codigoPHP/ejercicio01PDO.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>
                     <td>
-                        <a href="./mostrarcodigo/ejercicio01pdo.php"> <img class="img" alt="Codigo" src="./webroot/img/codigo.png" /></a>
+                        <a href="./mostrarcodigo/ejercicio01PDO.php"> <img class="img" alt="Codigo" src="./webroot/img/codigo.png" /></a>
                     </td>
-                    <td class="no_hecho">
+                    <td class="hecho">
                         <a href="./codigoPHP/ejercicio01MySQLi.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>
                     <td>
                         <a href="./mostrarcodigo/ejercicio01MySQLi.php"> <img class="img" alt="Codigo" src="./webroot/img/codigo.png" /></a>

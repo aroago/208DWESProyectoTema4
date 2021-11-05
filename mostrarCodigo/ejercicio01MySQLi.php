@@ -10,7 +10,7 @@ Fecha Modificacion: 04/11/2021 -->
     </head>
     <body>
         <?php
-            highlight_file("../codigoPHP/ejercicio01MySQL.php");
+            highlight_file("../codigoPHP/ejercicio01MySQLi.php");
         ?>
     </body>
 </html>
