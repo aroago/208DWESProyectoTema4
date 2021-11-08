@@ -5,8 +5,16 @@
         <meta name="author" content="aroaGraneroOmañas">
         <title>Ejercicio 1</title>
         <style>
+            body{
+                text-align: center;
+
+            }
+            table{
+                margin-left: auto;
+                margin-right: auto;
+            }
             td,tr{
-                border: solid 1px black;
+                border: solid 3px cadetblue;
             }
             h3{
                 color:green;
@@ -43,6 +51,7 @@
             echo "<h3>Conexion Establecida con Exito</<h3>";
            
         } catch (PDOException $excepcion) {//Código que se ejecutará si se produce alguna excepción
+            $miDB->rollback();//Si hubo error revierte los cambios
             //Almacenamos el código del error de la excepción en la variable $errorExcepcion
             $errorExcep = $excepcion->getCode(); 
             //Almacenamos el mensaje de la excepción en la variable $mensajeExcep

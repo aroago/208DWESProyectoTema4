@@ -50,14 +50,37 @@ Fecha Modificacion: 13/10/2021 -->
                 </tr>
                 <tr>
                     <td>2. Mostrar el contenido de la tabla Departamento y el número de registros.</td>
-                    <td class="no_hecho">
+                    <td class="hecho">
                         <a href="./codigoPHP/ejercicio02PDO.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>
                     <td>
                         <a href="./mostrarCodigo/ejercicio02PDO.php"> <img class="img" alt="Codigo" src="./webroot/img/codigo.png" /></a>
                     </td>
-
+                    <td class="hecho">
+                        <a href="./codigoPHP/ejercicio02MySQLi.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>
+                    <td>
+                        <a href="./mostrarCodigo/ejercicio02MySQLi.php"> <img class="img" alt="Codigo" src="./webroot/img/codigo.png" /></a>
+                    </td>
                 </tr>
 
+                <tr>
+                    <td>3. Formulario para añadir un departamento a la tabla Departamento con validación de entrada y control de errores.</td>
+                    <td class="hecho">
+                        <a href="./codigoPHP/ejercicio03PDO.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>
+                    <td>
+                        <a href="./mostrarCodigo/ejercicio03PDO.php"> <img class="img" alt="Codigo" src="./webroot/img/codigo.png" /></a>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>4. Formulario de búsqueda de departamentos por descripción (por una parte del campo DescDepartamento, si el usuario no pone nada deben aparecer todos los departamentos).
+                    </td>
+                    <td class="no_hecho">
+                        <a href="./codigoPHP/ejercicio04PDO.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>
+                    <td>
+                        <a href="./mostrarCodigo/ejercicio04PDO.php"> <img class="img" alt="Codigo" src="./webroot/img/codigo.png" /></a>
+                    </td>
+
+                </tr>
 
             </table>
 
