@@ -4,33 +4,56 @@
         <meta charset="UTF-8">
         <meta name="author" content="aroaGraneroOmañas">
         <title>Ejercicio 1</title>
+        <style>
+            td,tr{
+                border: solid 1px black;
+            }
+            h3{
+                color:green;
+            }
+        </style>
     </head>
     <body>
-       <?php
-            /*
-            * Ejercicio 01
-            * @author Aroa Granero Omañasç
-            * Fecha Creacion:  04/11/2021
-            * Última modificación: 05/11/2021
-            */
-             require_once '../config/confDBPDO.php';
-            
+        <?php
+        /*
+         * Ejercicio 01
+         * @author Aroa Granero Omañasç
+         * Fecha Creacion:  04/11/2021
+         * Última modificación: 05/11/2021
+         */
+        require_once '../config/confDBPDO.php';
+
+        try {
             //Establecimiento de la conexión 
             $cConexionDB = new PDO(HOST, USER, PASSWORD);
-
-            $attributes = array(
+            $cConexionDB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //Configuramos las excepciones
+            // Array de atributos de la conexión.
+            $aAtributos = [
                 "AUTOCOMMIT", "ERRMODE", "CASE", "CLIENT_VERSION", "CONNECTION_STATUS",
-                "ORACLE_NULLS", "PERSISTENT", "PREFETCH", "SERVER_INFO", "SERVER_VERSION",
-                "TIMEOUT"
-            );
+                "ORACLE_NULLS", "PERSISTENT", "SERVER_INFO", "SERVER_VERSION"
+            ];
 
-            foreach ($attributes as $val) {
-                echo "PDO::ATTR_$val: ";
-                echo $cConexionDB->getAttribute(constant("PDO::ATTR_$val")) . "\n";
-                echo "<br>";
+            // Recorrido y mostrado de los atributos de la conexión.
+            echo '<table>';
+            foreach ($aAtributos as $atributo) {
+                echo "<tr><td>PDO::ATTR_$atributo: </td>";
+                echo '<td>' . $cConexionDB->getAttribute(constant("PDO::ATTR_$atributo")) . "</td></tr>";
             }
-             //Cerrar la conexión
-             unset($cConexionDB);
-?>
+            echo '</table>';
+            echo "<h3>Conexion Establecida con Exito</<h3>";
+           
+        } catch (PDOException $excepcion) {//Código que se ejecutará si se produce alguna excepción
+            //Almacenamos el código del error de la excepción en la variable $errorExcepcion
+            $errorExcep = $excepcion->getCode(); 
+            //Almacenamos el mensaje de la excepción en la variable $mensajeExcep
+            $mensajeExcep = $excepcion->getMessage(); 
+
+            echo "<span style='color: red;'>Error: </span>" . $mensajeExcep. "<br>"; //Mostramos el mensaje de la excepción
+            echo "<span style='color: red;'>Código del error: </span>" . $errorExcep; //Mostramos el código de la excepción
+        }finally {
+             // Cierre de la conexión.
+            unset($cConexionDB);
+        }
+        ?>
     </body>
 </html>

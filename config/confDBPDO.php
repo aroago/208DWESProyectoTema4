@@ -13,6 +13,6 @@ define("HOST", "mysql:dbname=DAW208DBDepartamentos;host=192.168.3.108");
 /* Usuario con el que se conecta */
 define("USER", "usuarioDAW208DBDepartamentos");
 /* Contraseña con la que conectarse a la base de datos */
-define("PASS", "P@ssw0rd");
+define("PASSWORD", "P@ssw0rd");
 
 ?>

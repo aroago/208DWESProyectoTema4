@@ -40,16 +40,25 @@ Fecha Modificacion: 13/10/2021 -->
                     <td class="hecho">
                         <a href="./codigoPHP/ejercicio01PDO.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>
                     <td>
-                        <a href="./mostrarcodigo/ejercicio01PDO.php"> <img class="img" alt="Codigo" src="./webroot/img/codigo.png" /></a>
+                        <a href="./mostrarCodigo/ejercicio01PDO.php"> <img class="img" alt="Codigo" src="./webroot/img/codigo.png" /></a>
                     </td>
                     <td class="hecho">
                         <a href="./codigoPHP/ejercicio01MySQLi.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>
                     <td>
-                        <a href="./mostrarcodigo/ejercicio01MySQLi.php"> <img class="img" alt="Codigo" src="./webroot/img/codigo.png" /></a>
+                        <a href="./mostrarCodigo/ejercicio01MySQLi.php"> <img class="img" alt="Codigo" src="./webroot/img/codigo.png" /></a>
                     </td>
                 </tr>
+                <tr>
+                    <td>2. Mostrar el contenido de la tabla Departamento y el número de registros.</td>
+                    <td class="no_hecho">
+                        <a href="./codigoPHP/ejercicio02PDO.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>
+                    <td>
+                        <a href="./mostrarCodigo/ejercicio02PDO.php"> <img class="img" alt="Codigo" src="./webroot/img/codigo.png" /></a>
+                    </td>
 
-               
+                </tr>
+
+
             </table>
 
         </main>
