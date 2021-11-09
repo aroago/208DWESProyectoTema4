@@ -51,7 +51,6 @@
             echo "<h3>Conexion Establecida con Exito</<h3>";
            
         } catch (PDOException $excepcion) {//Código que se ejecutará si se produce alguna excepción
-            $miDB->rollback();//Si hubo error revierte los cambios
             //Almacenamos el código del error de la excepción en la variable $errorExcepcion
             $errorExcep = $excepcion->getCode(); 
             //Almacenamos el mensaje de la excepción en la variable $mensajeExcep
@@ -62,6 +61,49 @@
         }finally {
              // Cierre de la conexión.
             unset($cConexionDB);
+        }
+        ?>
+            <!-------------------ERROR CODIGO-------------------------->
+        <?php
+        /*
+         * Ejercicio 01 Con Error
+         * @author Aroa Granero Omañasç
+         * Fecha Creacion:  09/11/2021
+         * Última modificación: 09/11/2021
+         */
+        require_once '../config/confDBPDO.php';
+
+        try {
+            echo "<h1>ERROR EN LA CONTRASEYNA</h1>";
+            //Establecimiento de la conexión 
+            $mydb = new PDO(HOST, USER, "paso");
+            $mydb->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //Configuramos las excepciones
+            // Array de atributos de la conexión.
+            $aAtributos = [
+                "AUTOCOMMIT", "ERRMODE", "CASE", "CLIENT_VERSION", "CONNECTION_STATUS",
+                "ORACLE_NULLS", "PERSISTENT", "SERVER_INFO", "SERVER_VERSION"
+            ];
+
+            // Recorrido y mostrado de los atributos de la conexión.
+            echo '<table>';
+            foreach ($aAtributos as $atributo) {
+                echo "<tr><td>PDO::ATTR_$atributo: </td>";
+                echo '<td>' . $mydb->getAttribute(constant("PDO::ATTR_$atributo")) . "</td></tr>";
+            }
+            echo '</table>';
+            echo "<h3>Conexion Establecida con Exito</<h3>";
+           
+        } catch (PDOException $excepcion) {//Código que se ejecutará si se produce alguna excepción
+            //Almacenamos el código del error de la excepción en la variable $errorExcepcion
+            $errorExcep = $excepcion->getCode(); 
+            //Almacenamos el mensaje de la excepción en la variable $mensajeExcep
+            $mensajeExcep = $excepcion->getMessage(); 
+
+            echo "<span style='color: red;'>Error: </span>" . $mensajeExcep. "<br>"; //Mostramos el mensaje de la excepción
+            echo "<span style='color: red;'>Código del error: </span>" . $errorExcep; //Mostramos el código de la excepción
+        }finally {
+             // Cierre de la conexión.
+            unset($mydb);
         }
         ?>
     </body>

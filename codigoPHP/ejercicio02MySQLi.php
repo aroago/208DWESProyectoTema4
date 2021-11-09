@@ -22,19 +22,14 @@
             echo "<table>";
             echo "<tr>";
             foreach ($registroArray as $clave => $valor) {
-                    
                         echo "<th>$clave</th>";
-                    
-                    
                 }
                 echo "</tr>";
             while(!is_null($registroArray)){
                 echo "<tr>";
                 foreach ($registroArray as $clave => $valor) {
-                    
                         echo "<td>$valor</td>";
-                    
-                    
+
                 }
                 echo "</tr>";
                 $registroArray = $resultadoConsulta->fetch_object();

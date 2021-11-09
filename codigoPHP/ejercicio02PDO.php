@@ -17,7 +17,7 @@
                 border: solid 3px cadetblue;
             }
             h3{
-                color:green;
+                color:blue;
             }
         </style>
     </head>
@@ -36,8 +36,9 @@
             //Establecimiento de la conexión 
             $mydb = new PDO(HOST, USER, PASSWORD);
             $mydb->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //Configuramos las excepciones
-            $sql = 'SELECT * from DAW208DBDepartamentos.Departamento';
+            $sql = 'SELECT * FROM DAW208DBDepartamentos.Departamento';
             $resultadoConsulta = $mydb->query($sql);
+            echo "<h3>Mediante Fech</h3>";
             if ($resultadoConsulta) {
                 echo "<table>";
                 $row = $resultadoConsulta->fetch();
@@ -56,6 +57,10 @@
                 echo "</table>";
             }
             echo "Número de registros en la tabla Departamento: " . $resultadoConsulta->rowCount(); //Si la última sentencia SQL ejecutada por el objeto PDOStatement asociado fue una sentencia SELECT
+            echo "<h3>Mediante FechObjet</h3>";
+            echo '<h3>Mediante fetchAll</h3>';
+            
+            
         } catch (PDOException $excepcion) {//Código que se ejecutará si se produce alguna excepción
             //Almacenamos el código del error de la excepción en la variable $errorExcepcion
             $errorExcep = $excepcion->getCode();
