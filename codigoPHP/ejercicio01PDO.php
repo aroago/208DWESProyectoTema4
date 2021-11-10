@@ -25,7 +25,7 @@
         <?php
         /*
          * Ejercicio 01
-         * @author Aroa Granero Omañasç
+         * @author Aroa Granero Omañas
          * Fecha Creacion:  04/11/2021
          * Última modificación: 05/11/2021
          */
@@ -33,8 +33,8 @@
 
         try {
             //Establecimiento de la conexión 
-            $cConexionDB = new PDO(HOST, USER, PASSWORD);
-            $cConexionDB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //Configuramos las excepciones
+            $mydb = new PDO(HOST, USER, PASSWORD);
+            $mydb->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //Configuramos las excepciones
             // Array de atributos de la conexión.
             $aAtributos = [
                 "AUTOCOMMIT", "ERRMODE", "CASE", "CLIENT_VERSION", "CONNECTION_STATUS",
@@ -45,7 +45,7 @@
             echo '<table>';
             foreach ($aAtributos as $atributo) {
                 echo "<tr><td>PDO::ATTR_$atributo: </td>";
-                echo '<td>' . $cConexionDB->getAttribute(constant("PDO::ATTR_$atributo")) . "</td></tr>";
+                echo '<td>' . $mydb->getAttribute(constant("PDO::ATTR_$atributo")) . "</td></tr>";
             }
             echo '</table>';
             echo "<h3>Conexion Establecida con Exito</<h3>";
@@ -60,14 +60,14 @@
             echo "<span style='color: red;'>Código del error: </span>" . $errorExcep; //Mostramos el código de la excepción
         }finally {
              // Cierre de la conexión.
-            unset($cConexionDB);
+            unset($mydb);
         }
         ?>
             <!-------------------ERROR CODIGO-------------------------->
         <?php
         /*
          * Ejercicio 01 Con Error
-         * @author Aroa Granero Omañasç
+         * @author Aroa Granero Omañas
          * Fecha Creacion:  09/11/2021
          * Última modificación: 09/11/2021
          */

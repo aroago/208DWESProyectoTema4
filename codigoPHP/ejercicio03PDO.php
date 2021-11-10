@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--Aroa Granero Omañas 
 Fecha Creacion: 08/11/2021
-Fecha Modificacion: 08/11/2021 -->
+Fecha Modificacion: 09/11/2021 -->
 <html>
     <head>
         <meta charset="UTF-8">
@@ -27,14 +27,14 @@ Fecha Modificacion: 08/11/2021 -->
             }
             #btnEnviar{
 
-                width:200px;
+                width:150px;
                 height:30px;
                 background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
-                border-radius:5px;
+                border-radius:30px;
                 align-items:center;
                 justify-content:center;
                 text-transform:uppercase;
-                font-size:2vw;
+                font-size:20px;
                 font-weight:bold;
             }
             #btnEnviar:hover {

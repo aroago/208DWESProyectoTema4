@@ -81,7 +81,28 @@ Fecha Modificacion: 13/10/2021 -->
                     </td>
 
                 </tr>
+                <tr>
+                    <td>5. Pagina web que añade tres registros a nuestra tabla Departamento utilizando tres instrucciones
+                        insert y una transacción, de tal forma que se añadan los tres registros o no se añada ninguno
+                    </td>
+                    <td class="no_hecho">
+                        <a href="./codigoPHP/ejercicio05PDO.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>
+                    <td>
+                        <a href="./mostrarCodigo/ejercicio05PDO.php"> <img class="img" alt="Codigo" src="./webroot/img/codigo.png" /></a>
+                    </td>
 
+                </tr>
+                <tr>
+                    <td>6. Pagina web que cargue registros en la tabla Departamento desde un array departamentosnuevos
+                        utilizando una consulta preparada
+                    </td>
+                    <td class="no_hecho">
+                        <a href="./codigoPHP/ejercicio06PDO.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>
+                    <td>
+                        <a href="./mostrarCodigo/ejercicio06PDO.php"> <img class="img" alt="Codigo" src="./webroot/img/codigo.png" /></a>
+                    </td>
+
+                </tr>
             </table>
 
         </main>
