@@ -124,7 +124,7 @@ Fecha Modificacion: 13/10/2021 -->
                         Si el alumno dispone de tiempo probar a exportar e importar  a o desde un directorio (a elegir) en
                         el equipo cliente
                     </td>
-                    <td class="no_hecho">
+                    <td class="hecho">
                         <a href="./codigoPHP/ejercicio08PDO.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>
                     <td>
                         <a href="./mostrarCodigo/ejercicio08PDO.php"> <img class="img" alt="Codigo" src="./webroot/img/codigo.png" /></a>
