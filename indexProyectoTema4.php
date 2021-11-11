@@ -74,7 +74,7 @@ Fecha Modificacion: 13/10/2021 -->
                 <tr>
                     <td>4. Formulario de búsqueda de departamentos por descripción (por una parte del campo DescDepartamento, si el usuario no pone nada deben aparecer todos los departamentos).
                     </td>
-                    <td class="no_hecho">
+                    <td class="hecho">
                         <a href="./codigoPHP/ejercicio04PDO.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>
                     <td>
                         <a href="./mostrarCodigo/ejercicio04PDO.php"> <img class="img" alt="Codigo" src="./webroot/img/codigo.png" /></a>
@@ -100,6 +100,34 @@ Fecha Modificacion: 13/10/2021 -->
                         <a href="./codigoPHP/ejercicio06PDO.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>
                     <td>
                         <a href="./mostrarCodigo/ejercicio06PDO.php"> <img class="img" alt="Codigo" src="./webroot/img/codigo.png" /></a>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>7. Página web que toma datos (código y descripción) de un fichero xml y los añade a la tabla
+                        Departamento de nuestra base de datos. (IMPORTAR). El fichero importado se encuentra en el
+                        directorio .../tmp/ del servidor.
+                    </td>
+                    <td class="no_hecho">
+                        <a href="./codigoPHP/ejercicio07PDO.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>
+                    <td>
+                        <a href="./mostrarCodigo/ejercicio07PDO.php"> <img class="img" alt="Codigo" src="./webroot/img/codigo.png" /></a>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>8. Página web que toma datos (código y descripción) de la tabla Departamento y guarda en un
+                        fichero departamento.xml. (COPIA DE SEGURIDAD / EXPORTAR). El fichero exportado se
+                        encuentra en el directorio .../tmp/ del servidor.
+                        Si el alumno dispone de tiempo probar distintos formatos de importación - exportación: XML,
+                        JSON, CSV, TXT,...
+                        Si el alumno dispone de tiempo probar a exportar e importar  a o desde un directorio (a elegir) en
+                        el equipo cliente
+                    </td>
+                    <td class="no_hecho">
+                        <a href="./codigoPHP/ejercicio08PDO.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>
+                    <td>
+                        <a href="./mostrarCodigo/ejercicio08PDO.php"> <img class="img" alt="Codigo" src="./webroot/img/codigo.png" /></a>
                     </td>
 
                 </tr>
