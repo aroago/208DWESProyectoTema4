@@ -64,10 +64,9 @@ Fecha Modificacion: 10/11/2021 -->
             if (isset($_POST['Enviar'])) {                                      //Cuando se pulsa el boton de buscar
                 $aFormulario['DescDepartamento'] = $_REQUEST['DescDepartamento']; //Guardamos en la variable lo que se ha introducido en el formulario
                 $DescDepartamento = $aFormulario['DescDepartamento'];
-//Tambien podriamos no guardar la variable y poner en la sentencia : '%{$_REQUEST['DescDepartamento']}%';";
 
-                $consulta = "SELECT * FROM Departamento WHERE DescDepartamento LIKE '%$DescDepartamento%'";     //Guardamos en la variable la consulta que queremos hacer
-                $resultadoConsulta = $mydb->prepare($consulta);                 //Preparamos la consulta
+                $consulta = "SELECT * FROM Departamento WHERE DescDepartamento LIKE '%$DescDepartamento%'"; //Guardamos en la variable la consulta que queremos hacer
+                $resultadoConsulta = $mydb->prepare($consulta); //Preparamos la consulta
                 $resultadoConsulta->execute();
                 if ($resultadoConsulta->rowCount() == 0) {
                     echo "No se ha encontrado ningún departamento con esa descripción";

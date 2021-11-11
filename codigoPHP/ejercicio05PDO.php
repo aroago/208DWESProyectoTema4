@@ -51,7 +51,7 @@ Fecha Modificacion: 11/11/2021 -->
             echo "<h3 style='color: green'>Las inserciones se han realizado correctamente</h3>" . "<br>";
             $consultaSelect = $mydb->prepare('SELECT * FROM Departamento');
             $consultaSelect->execute();
-            //Crea una tabla para introducir los datos que hay en la BBDD
+            //Crea una tabla para visualizar el contenido de la bd conectada
             echo "<table>";
             echo "<tr>";
             echo "<th>Codigo</th>";
@@ -67,7 +67,7 @@ Fecha Modificacion: 11/11/2021 -->
                 echo "</tr>";
             }
             echo "</table>";
-            //Captura de la excepción
+            //Captura de la excepción Es decir si hay algun error lo muestra
         } catch (Exception $miExceptionPDO) {
             $mydb->rollback();
             echo "<h3 style='color: red'>Error en la transacción</h3>";
