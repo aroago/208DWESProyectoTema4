@@ -58,8 +58,8 @@ Fecha Modificacion: 10/11/2021 -->
         ];
         try {
 
-            $mydb = new PDO(HOST, USER, PASSWORD);                            //Establecer una conexión con la base de datos 
-            $mydb->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //La clase PDO permite definir la fórmula que usará cuando se produzca un error, utilizando el atributo PDO::ATTR_ERRMODE
+            $mydb = new PDO(HOST, USER, PASSWORD); //Establecer una conexión con la base de datos 
+            $mydb->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
 
             if (isset($_POST['Enviar'])) {                                      //Cuando se pulsa el boton de buscar
                 $aFormulario['DescDepartamento'] = $_REQUEST['DescDepartamento']; //Guardamos en la variable lo que se ha introducido en el formulario
