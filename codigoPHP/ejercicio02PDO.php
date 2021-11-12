@@ -58,14 +58,14 @@
                 echo "</table>";
             }
             echo "Número de registros en la tabla Departamento: " . $resultadoConsulta->rowCount(); //Si la última sentencia SQL ejecutada por el objeto PDOStatement asociado fue una sentencia SELECT
-            echo "<h3>Mediante FechObjet</h3>";
+           // echo "<h3>Mediante FechObjet</h3>";
            /* $registro=$resultadoConsulta->fetchObject();
             while($registro){
                 ?>
     
             <?php
             }*/
-            echo '<h3>Mediante fetchAll</h3>';
+         
             
             
         } catch (PDOException $excepcion) {//Código que se ejecutará si se produce alguna excepción

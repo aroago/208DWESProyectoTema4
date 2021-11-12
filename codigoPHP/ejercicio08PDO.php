@@ -25,53 +25,72 @@ Fecha Modificacion: 11/11/2021 -->
     </head>
 
     <body>
-        <p>8. Página web que toma datos (código y descripción) de la tabla Departamento y guarda en un
-            fichero departamento.xml. (COPIA DE SEGURIDAD / EXPORTAR). El fichero exportado se
-            encuentra en el directorio .../tmp/ del servidor.
-            Si el alumno dispone de tiempo probar distintos formatos de importación - exportación: XML,
-            JSON, CSV, TXT,...
-            Si el alumno dispone de tiempo probar a exportar e importar  a o desde un directorio (a elegir) en
-            el equipo cliente</p>
+
         <?php
+        /* 8. Página web que toma datos (código y descripción) de la tabla Departamento y guarda en un
+          fichero departamento.xml. (COPIA DE SEGURIDAD / EXPORTAR). El fichero exportado se
+          encuentra en el directorio .../tmp/ del servidor.
+          Si el alumno dispone de tiempo probar distintos formatos de importación - exportación: XML,
+          JSON, CSV, TXT,...
+          Si el alumno dispone de tiempo probar a exportar e importar  a o desde un directorio (a elegir) en
+          el equipo cliente */
         //Fichero que contiene los datos de la bases de datos
         require_once '../config/confDBPDO.php';
-        try{
+
+
+        try {
             //objetos PDO con los datos de la conexion
-        $mydb = new PDO(HOST, USER, PASSWORD); //Establecer una conexión con la base de datos 
-        $mydb->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        } catch (PDOException $miExceptionPDO){
-            die("No se ha podido conectar con la Base de Datos");
-        }
-        try{
-        $consulta = "SELECT * FROM Departamento"; //Guardamos en la variable la consulta que queremos hacer
-        $resultadoConsulta = $mydb->prepare($consulta); //Preparamos la consulta
-        $resultadoConsulta->execute();
-        
-        $archivoXML = new DOMDocument("1.0", "utf-8");
-        $archivoXML -> formatOutput = true;
-        
-        $nodoDepartamentos = $archivoXML->appendChild($nodoDepartamentos);
-        while ($oDepartamento = $consulta->fetchObject()) {
-          $departamento = $raiz->appendChild($archivoXML->createElement("Departamento"));
-                $departamento->appendChild($archivoXML->createElement("CodDepartamento", $oDepartamento->CodDepartamento));
-                $departamento->appendChild($archivoXML->createElement("DescDepartamento", $oDepartamento->DescDepartamento));
-                $departamento->appendChild($archivoXML->createElement("FechaBaja", $oDepartamento->FechaBaja));
-                $departamento->appendChild($archivoXML->createElement("VolumenNegocio", $oDepartamento->VolumenNegocio));
+            $mydb = new PDO(HOST, USER, PASSWORD); //Establecer una conexión con la base de datos 
+            $mydb->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            
+            $consulta = "SELECT * FROM Departamento"; //Guardamos en la variable la consulta que queremos hacer
+            $resultadoConsulta = $mydb->prepare($consulta); //Preparamos la consulta
+            $resultadoConsulta->execute();
+
+            $archivoXML = new DOMDocument("1.0", "utf-8");
+            $archivoXML->formatOutput = true;
+
+
+            $oDepartamentos = $archivoXML->createElement("departamentos");
+            $nodoDepartamentos = $archivoXML->appendChild($oDepartamentos);
+
+
+            $oDepartamento = $resultadoConsulta->fetchObject();
+
+            while ($oDepartamento) {
+                // Creación del elemento departamento.
+                $oDepartamento = $archivoXML->createElement("departamento");
+                $nodoDepartamentos->appendChild($oDepartamento);
+
+                // Creación y añadido de la información sobre el departamento.
+                $oElemCodigo = $archivoXML->createElement('codDepartamento', $oDepartamento->codDepartamento);
+                $oDepartamento->appendChild($oElemCodigo);
+
+                $oElemCodigo = $archivoXML->createElement('descDepartamento', $oDepartamento->descDepartamento);
+                $oDepartamento->appendChild($oElemCodigo);
+
+                $oElemCodigo = $archivoXML->createElement('fechaBaja', $oDepartamento->fechaBaja);
+                $oDepartamento->appendChild($oElemCodigo);
+
+                $oElemCodigo = $archivoXML->createElement('volumenNegocio', $oDepartamento->volumenNegocio);
+                $oDepartamento->appendChild($oElemCodigo);
+
+                $oDepartamento = $resultadoConsulta->fetchObject();
             }
-        
-       
-        echo $dom->saveXML();//crear un documento DOM
-        $dom->save('../tmp/prueba.xml');//Establecemos la ruta donde queremos que se guarde
-        } catch (PDOException $miExceptionPDO){
+              $timestamp = new DateTime();//creamos el timeStamp para el nombre del fichero.
+            // Guardado del archivo.
+            echo"El archivo seha rellenado con: ". $archivoXML->save('../tmp/'.$timestamp->getTimestamp().'.xml')." bytes";
+        } catch (PDOException $miExceptionPDO) {
             echo "<h1 style='color=red;'>No se pudo exportar el archivo</h1>";
             //mensaje de salida 
             echo $miExceptionPDO->getMessage();
+             echo $miExceptionPDO->getCode();
         } finally {
             //Para finalizar cerramos la conexion
             unset($mydb);
         }
         ?>
-        
-        
+
+
     </body>
 </html>
