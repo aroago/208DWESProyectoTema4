@@ -36,7 +36,7 @@ Fecha Modificacion: 13/10/2021 -->
                     <td>CODIGO</td>
                 </tr>
                 <tr>
-                    <td>1.Conexión a la base de datos con la cuenta usuario y tratamiento de errores.</td>
+                    <td><p>1.Conexión a la base de datos con la cuenta usuario y tratamiento de errores.</p></td>
                     <td class="hecho">
                         <a href="./codigoPHP/ejercicio01PDO.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>
                     <td>
@@ -49,7 +49,7 @@ Fecha Modificacion: 13/10/2021 -->
                     </td>
                 </tr>
                 <tr>
-                    <td>2. Mostrar el contenido de la tabla Departamento y el número de registros.</td>
+                    <td><p>2. Mostrar el contenido de la tabla Departamento y el número de registros.</p></td>
                     <td class="hecho">
                         <a href="./codigoPHP/ejercicio02PDO.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>
                     <td>
@@ -63,7 +63,7 @@ Fecha Modificacion: 13/10/2021 -->
                 </tr>
 
                 <tr>
-                    <td>3. Formulario para añadir un departamento a la tabla Departamento con validación de entrada y control de errores.</td>
+                    <td><p>3. Formulario para añadir un departamento a la tabla Departamento con validación de entrada y control de errores.</p></td>
                     <td class="hecho">
                         <a href="./codigoPHP/ejercicio03PDO.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>
                     <td>
@@ -72,7 +72,8 @@ Fecha Modificacion: 13/10/2021 -->
 
                 </tr>
                 <tr>
-                    <td>4. Formulario de búsqueda de departamentos por descripción (por una parte del campo DescDepartamento, si el usuario no pone nada deben aparecer todos los departamentos).
+                    <td><p>4. Formulario de búsqueda de departamentos por descripción (por una parte del campo DescDepartamento, si el usuario no pone nada deben aparecer todos los departamentos).
+                        </p>
                     </td>
                     <td class="hecho">
                         <a href="./codigoPHP/ejercicio04PDO.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>
@@ -82,8 +83,8 @@ Fecha Modificacion: 13/10/2021 -->
 
                 </tr>
                 <tr>
-                    <td>5. Pagina web que añade tres registros a nuestra tabla Departamento utilizando tres instrucciones
-                        insert y una transacción, de tal forma que se añadan los tres registros o no se añada ninguno
+                    <td><p>5. Pagina web que añade tres registros a nuestra tabla Departamento utilizando tres instrucciones
+                            insert y una transacción, de tal forma que se añadan los tres registros o no se añada ninguno</p>
                     </td>
                     <td class="hecho">
                         <a href="./codigoPHP/ejercicio05PDO.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>
@@ -93,8 +94,8 @@ Fecha Modificacion: 13/10/2021 -->
 
                 </tr>
                 <tr>
-                    <td>6. Pagina web que cargue registros en la tabla Departamento desde un array departamentos nuevos
-                        utilizando una consulta preparada
+                    <td><p>6. Pagina web que cargue registros en la tabla Departamento desde un array departamentos nuevos
+                            utilizando una consulta preparada</p>
                     </td>
                     <td class="hecho">
                         <a href="./codigoPHP/ejercicio06PDO.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>
@@ -104,9 +105,9 @@ Fecha Modificacion: 13/10/2021 -->
 
                 </tr>
                 <tr>
-                    <td>7. Página web que toma datos (código y descripción) de un fichero xml y los añade a la tabla
-                        Departamento de nuestra base de datos. (IMPORTAR). El fichero importado se encuentra en el
-                        directorio .../tmp/ del servidor.
+                    <td><p>7. Página web que toma datos (código y descripción) de un fichero xml y los añade a la tabla
+                            Departamento de nuestra base de datos. (IMPORTAR). El fichero importado se encuentra en el
+                            directorio .../tmp/ del servidor.</p>
                     </td>
                     <td class="no_hecho">
                         <a href="./codigoPHP/ejercicio07PDO.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>
@@ -116,13 +117,13 @@ Fecha Modificacion: 13/10/2021 -->
 
                 </tr>
                 <tr>
-                    <td>8. Página web que toma datos (código y descripción) de la tabla Departamento y guarda en un
-                        fichero departamento.xml. (COPIA DE SEGURIDAD / EXPORTAR). El fichero exportado se
-                        encuentra en el directorio .../tmp/ del servidor.
-                        Si el alumno dispone de tiempo probar distintos formatos de importación - exportación: XML,
-                        JSON, CSV, TXT,...
-                        Si el alumno dispone de tiempo probar a exportar e importar  a o desde un directorio (a elegir) en
-                        el equipo cliente
+                    <td><p>8. Página web que toma datos (código y descripción) de la tabla Departamento y guarda en un
+                            fichero departamento.xml. (COPIA DE SEGURIDAD / EXPORTAR). El fichero exportado se
+                            encuentra en el directorio .../tmp/ del servidor.
+                            Si el alumno dispone de tiempo probar distintos formatos de importación - exportación: XML,
+                            JSON, CSV, TXT,...
+                            Si el alumno dispone de tiempo probar a exportar e importar  a o desde un directorio (a elegir) en
+                            el equipo cliente</p>
                     </td>
                     <td class="hecho">
                         <a href="./codigoPHP/ejercicio08PDO.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>

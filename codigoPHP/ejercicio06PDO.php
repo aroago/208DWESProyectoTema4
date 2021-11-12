@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <!--Aroa Granero Omañas 
 Fecha Creacion: 11/11/2021
@@ -20,12 +23,39 @@ Fecha Modificacion: 11/11/2021 -->
             h3{
                 color:cadetblue;
             }
+/* Add a black background color to the top navigation */
+      .topnav {
+                background-color: #333;
+                overflow: hidden;
+                margin-bottom: 30px;
+            }
 
+            /* Style the links inside the navigation bar */
+            .topnav a {
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 20px;
+            }
+
+            /* Change the color of links on hover */
+            .topnav a:hover {
+                background-color: rgb(77, 157, 182);
+                color: black;
+            }
 
         </style>
     </head>
 
     <body>
+        <div class="topnav">
+        <a href="../indexProyectoTema4.php">&#8666;</a>
+        <a href="../../index.php">&#127968;</a>
+        <a href="https://github.com/aroago">GitHub</a>
+        <a href="../mostrarCodigo/ejercicio06PDO.php">Codigo</a>
+    </div>
         <h3>6. Pagina web que cargue registros en la tabla Departamento desde un array departamentos nuevos
             utilizando una consulta preparada</h3>
         <?php

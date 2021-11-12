@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <!--Aroa Granero Omañas 
 Fecha Creacion: 08/11/2021
@@ -20,7 +23,7 @@ Fecha Modificacion: 09/11/2021 -->
             h3{
                 color:blue;
             }
-            
+
             form{
                 background-color: white;
                 border-radius: 5px;
@@ -38,13 +41,40 @@ Fecha Modificacion: 09/11/2021 -->
                 font-weight:bold;
             }
             #btnEnviar:hover {
-               color: white;
+                color: white;
             }
-            
+            /* Add a black background color to the top navigation */
+            .topnav {
+                background-color: #333;
+                overflow: hidden;
+                margin-bottom: 30px;
+            }
+
+            /* Style the links inside the navigation bar */
+            .topnav a {
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 20px;
+            }
+
+            /* Change the color of links on hover */
+            .topnav a:hover {
+                background-color: rgb(77, 157, 182);
+                color: black;
+            }
         </style>
     </head>
 
     <body>
+        <div class="topnav">
+            <a href="../indexProyectoTema4.php">&#8666;</a>
+            <a href="../../index.php">&#127968;</a>
+            <a href="https://github.com/aroago">GitHub</a>
+            <a href="../mostrarCodigo/ejercicio03PDO.php">Codigo</a>
+        </div>
         <h2>Formulario e inserccion de datos en tabla</h2>
         <?php
         require_once '../core/210322ValidacionFormularios.php'; // incluyo la libreria de validacion para validar los campos de formulario
@@ -172,10 +202,10 @@ Fecha Modificacion: 09/11/2021 -->
                     while ($oDepartamento) { // recorro los registros que devuelve la consulta de la consulta 
                         ?>
                         <tr>
-                            <td><?php echo $oDepartamento->CodDepartamento; // obtengo el valor del codigo del departamento del registro actual    ?></td>
-                            <td><?php echo $oDepartamento->DescDepartamento; // obtengo el valor de la descripcion del departamento del registro actual   ?></td>
-                            <td><?php echo $oDepartamento->FechaBaja; // obtengo el valor de la fecha de baja del departamento del registro actual   ?></td>
-                            <td><?php echo $oDepartamento->VolumenNegocio; // obtengo el valor de la fecha de baja del departamento del registro actual   ?></td>
+                            <td><?php echo $oDepartamento->CodDepartamento; // obtengo el valor del codigo del departamento del registro actual     ?></td>
+                            <td><?php echo $oDepartamento->DescDepartamento; // obtengo el valor de la descripcion del departamento del registro actual    ?></td>
+                            <td><?php echo $oDepartamento->FechaBaja; // obtengo el valor de la fecha de baja del departamento del registro actual    ?></td>
+                            <td><?php echo $oDepartamento->VolumenNegocio; // obtengo el valor de la fecha de baja del departamento del registro actual    ?></td>
                         </tr>
                         <?php
                         $oDepartamento = $resultadoConsulta2->fetchObject(); // guardo el registro actual como un objeto y avanzo el puntero al siguiente registro de la consulta 

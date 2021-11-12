@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -19,9 +22,37 @@
             h3{
                 color:green;
             }
+            /* Add a black background color to the top navigation */
+            .topnav {
+                background-color: #333;
+                overflow: hidden;
+                margin-bottom: 30px;
+            }
+
+            /* Style the links inside the navigation bar */
+            .topnav a {
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 20px;
+            }
+
+            /* Change the color of links on hover */
+            .topnav a:hover {
+                background-color: rgb(77, 157, 182);
+                color: black;
+            }
         </style>
     </head>
     <body>
+        <div class="topnav">
+            <a href="../indexProyectoTema4.php">&#8666;</a>
+            <a href="../../index.php">&#127968;</a>
+            <a href="https://github.com/aroago">GitHub</a>
+            <a href="../mostrarCodigo/ejercicio01PDO.php">Codigo</a>
+        </div>
         <?php
         /*
          * Ejercicio 01
@@ -49,21 +80,20 @@
             }
             echo '</table>';
             echo "<h3>Conexion Establecida con Exito</<h3>";
-           
         } catch (PDOException $excepcion) {//Código que se ejecutará si se produce alguna excepción
             //Almacenamos el código del error de la excepción en la variable $errorExcepcion
-            $errorExcep = $excepcion->getCode(); 
+            $errorExcep = $excepcion->getCode();
             //Almacenamos el mensaje de la excepción en la variable $mensajeExcep
-            $mensajeExcep = $excepcion->getMessage(); 
+            $mensajeExcep = $excepcion->getMessage();
 
-            echo "<span style='color: red;'>Error: </span>" . $mensajeExcep. "<br>"; //Mostramos el mensaje de la excepción
+            echo "<span style='color: red;'>Error: </span>" . $mensajeExcep . "<br>"; //Mostramos el mensaje de la excepción
             echo "<span style='color: red;'>Código del error: </span>" . $errorExcep; //Mostramos el código de la excepción
-        }finally {
-             // Cierre de la conexión.
+        } finally {
+            // Cierre de la conexión.
             unset($mydb);
         }
         ?>
-            <!-------------------ERROR CODIGO-------------------------->
+        <!-------------------ERROR CODIGO-------------------------->
         <?php
         /*
          * Ejercicio 01 Con Error
@@ -92,17 +122,16 @@
             }
             echo '</table>';
             echo "<h3>Conexion Establecida con Exito</<h3>";
-           
         } catch (PDOException $excepcion) {//Código que se ejecutará si se produce alguna excepción
             //Almacenamos el código del error de la excepción en la variable $errorExcepcion
-            $errorExcep = $excepcion->getCode(); 
+            $errorExcep = $excepcion->getCode();
             //Almacenamos el mensaje de la excepción en la variable $mensajeExcep
-            $mensajeExcep = $excepcion->getMessage(); 
+            $mensajeExcep = $excepcion->getMessage();
 
-            echo "<span style='color: red;'>Error: </span>" . $mensajeExcep. "<br>"; //Mostramos el mensaje de la excepción
+            echo "<span style='color: red;'>Error: </span>" . $mensajeExcep . "<br>"; //Mostramos el mensaje de la excepción
             echo "<span style='color: red;'>Código del error: </span>" . $errorExcep; //Mostramos el código de la excepción
-        }finally {
-             // Cierre de la conexión.
+        } finally {
+            // Cierre de la conexión.
             unset($mydb);
         }
         ?>
