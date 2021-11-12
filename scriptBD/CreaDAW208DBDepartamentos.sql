@@ -1,10 +1,10 @@
 /* Crear base de datos DAW208DBDepartamentos*/
 
-CREATE DATABASE IF NOT EXISTS DAW208DBDepartamentos;
+CREATE DATABASE IF NOT EXISTS DB208DWESProyectoTema4;
 
 /* Usar base de datos DAW208DBDepartamentos*/
 
-USE DAW208DBDepartamentos;
+USE DB208DWESProyectoTema4;
 
 /* Crear tabla Departamento con los campos (PK)CodDepartamento (3 letras mayusculas), DescDepartamento (max. 255 caracteres),FechaBaja, VolumenNegocio (float-€)*/
 
@@ -16,8 +16,8 @@ USE DAW208DBDepartamentos;
     ) ENGINE=INNODB;
 /* Crear el usuario usuarioDAW208DBDepartamentos / paso*/
 
-CREATE USER 'usuarioDAW208DBDepartamentos'@'%' identified BY 'P@ssw0rd';
+CREATE USER 'User208DWESProyectoTema4'@'%' identified BY 'P@ssw0rd';
 
 /* Dar permisos al usuario usuarioDAW208DBDepartamentos*/
 
-GRANT ALL PRIVILEGES ON DAW208DBDepartamentos.* TO 'usuarioDAW208DBDepartamentos'@'%' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON DB208DWESProyectoTema4.* TO 'User208DWESProyectoTema4'@'%' WITH GRANT OPTION;

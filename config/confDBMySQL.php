@@ -9,13 +9,13 @@
 
 //ENTORNO DESARROLLO CLASE
 /* IP del servidor */
-define("DB", "DAW208DBDepartamentos");
+define("DB", "DB208DWESProyectoTema4");
 /* Usuario con el que se conecta */
-define("USER", "usuarioDAW208DBDepartamentos");
+define("USER", "User208DWESProyectoTema4");
 /* Contraseña con la que conectarse a la base de datos */
 define("PASSWORD", "P@ssw0rd");
 /*Nombre de la base de datos*/
-define("HOST", "192.168.3.108");
+define("HOST", "DAW208.sauces.local");
 
 //ENTORNO DESARROLLO CASA
 /* IP del servidor */

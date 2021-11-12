@@ -67,7 +67,7 @@
             //Establecimiento de la conexión 
             $mydb = new PDO(HOST, USER, PASSWORD);
             $mydb->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //Configuramos las excepciones
-            $sql = 'SELECT * FROM DAW208DBDepartamentos.Departamento';
+            $sql = 'SELECT * FROM Departamento';
             $resultadoConsulta = $mydb->prepare($sql);//preparamos la consulta que vamos a utilizar
             $resultadoConsulta->execute();//ejecuta la consulta
             echo "<h3>Mediante Fech</h3>";
