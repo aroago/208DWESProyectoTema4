@@ -51,14 +51,20 @@ Fecha Modificacion: 11/11/2021 -->
 
     <body>
          <div class="topnav">
-        <a href="../indexProyectoTema4.php">&#8666;</a>
-        <a href="../../index.php">&#127968;</a>
+        <a href="../indexProyectoTema4.php">&#8666;</a>        
         <a href="https://github.com/aroago">GitHub</a>
         <a href="../mostrarCodigo/ejercicio05PDO.php">Codigo</a>
+        <a href="../../index.php">&#127968;</a>
     </div>
         <h3>5. Pagina web que añade tres registros a nuestra tabla Departamento utilizando tres instrucciones <br>
             insert y una transacción, de tal forma que se añadan los tres registros o no se añada ninguno</h3>
         <?php
+        /*
+         * @author: Aroa Granero Omañas
+         * @version: v1
+         * Created on: 11/11/2021
+         * Last modification: 11/11/2021
+         */
         require_once '../config/confDBPDO.php';
         try {
             $mydb = new PDO(HOST, USER, PASSWORD); //Establecer una conexión con la base de datos 

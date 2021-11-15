@@ -42,8 +42,8 @@ Fecha Modificacion: 10/11/2021 -->
             #btnEnviar:hover {
                 color: white;
             }
-/* Add a black background color to the top navigation */
-      .topnav {
+            /* Add a black background color to the top navigation */
+            .topnav {
                 background-color: #333;
                 overflow: hidden;
                 margin-bottom: 30px;
@@ -69,13 +69,20 @@ Fecha Modificacion: 10/11/2021 -->
 
     <body>
         <div class="topnav">
-        <a href="../indexProyectoTema4.php">&#8666;</a>
-        <a href="../../index.php">&#127968;</a>
-        <a href="https://github.com/aroago">GitHub</a>
-        <a href="../mostrarCodigo/ejercicio04PDO.php">Codigo</a>
-    </div>
+            <a href="../indexProyectoTema4.php">&#8666;</a>        
+            <a href="https://github.com/aroago">GitHub</a>
+            <a href="../mostrarCodigo/ejercicio04PDO.php">Codigo</a>
+            <a href="../../index.php">&#127968;</a>
+        </div>
         <h2>Formulario e inserccion de datos en tabla</h2>
+
         <?php
+        /*
+         * @author: Aroa Granero Omañas
+         * @version: v1
+         * Created on: 10/11/2021
+         * Last modification: 10/11/2021
+         */
         require_once '../core/210322ValidacionFormularios.php'; // incluyo la libreria de validacion para validar los campos de formulario
         require_once '../config/confDBPDO.php';
 
@@ -89,7 +96,7 @@ Fecha Modificacion: 10/11/2021 -->
         try {
 
             $mydb = new PDO(HOST, USER, PASSWORD); //Establecer una conexión con la base de datos 
-            $mydb->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
+            $mydb->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             if (isset($_POST['Enviar'])) {                                      //Cuando se pulsa el boton de buscar
                 $aFormulario['DescDepartamento'] = $_REQUEST['DescDepartamento']; //Guardamos en la variable lo que se ha introducido en el formulario
@@ -119,7 +126,7 @@ Fecha Modificacion: 10/11/2021 -->
                 echo "</table>";
             }
             echo "<p style='color: green;'> SE HA ESTABLECIDO LA CONEXION </p><br>"; //Salta el mensaje de conexion establecida   
-        } catch (PDOException $miExceptionPDO) {       //Pero se no se ha podido ejecutar saltara la excepcion
+        } catch (PDOException $miExceptionPDO) {       //Si no se ha podido ejecutar saltara la excepcion
             echo "<h3>Mensaje de ERROR</h3>";
             //Mensaje de salida
             echo "Error: " . $miExceptionPDO->getMessage() . "<br>";
@@ -130,7 +137,6 @@ Fecha Modificacion: 10/11/2021 -->
             unset($mydb);
         }
         ?>
-
         <form name="formulario" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
             <fieldset>
                 <legend>Buscar Departamento</legend>
@@ -143,7 +149,6 @@ Fecha Modificacion: 10/11/2021 -->
             </fieldset>
             <input id="btnEnviar" type="submit" value="Insertar" name="Enviar">
         </form>
-
 
     </body>
 </html>

@@ -51,14 +51,20 @@ Fecha Modificacion: 11/11/2021 -->
 
     <body>
         <div class="topnav">
-        <a href="../indexProyectoTema4.php">&#8666;</a>
-        <a href="../../index.php">&#127968;</a>
+        <a href="../indexProyectoTema4.php">&#8666;</a>        
         <a href="https://github.com/aroago">GitHub</a>
         <a href="../mostrarCodigo/ejercicio06PDO.php">Codigo</a>
+        <a href="../../index.php">&#127968;</a>
     </div>
         <h3>6. Pagina web que cargue registros en la tabla Departamento desde un array departamentos nuevos
             utilizando una consulta preparada</h3>
         <?php
+        /*
+         * @author: Aroa Granero Omañas
+         * @version: v1
+         * Created on: 11/11/2021
+         * Last modification: 11/11/2021
+         */
         require_once '../config/confDBPDO.php';
         // Array con los departamentos que vamos a insertar.
         $aDepartamentos = [
