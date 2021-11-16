@@ -115,7 +115,7 @@ Fecha Modificacion: 11/11/2021 -->
                 }
                 
             // Guardado del archivo.
-            echo"El archivo se ha rellenado con: ". $archivoXML->save('../tmp/documentoXML.xml')." bytes";
+            echo '<div>Se han escrito '.$archivoXML->save('../tmp/departamento.xml').' bytes</div>';
         } catch (PDOException $miExceptionPDO) {
             echo "<h1 style='color=red;'>No se pudo exportar el archivo</h1>";
             //mensaje de salida 

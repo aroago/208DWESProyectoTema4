@@ -109,7 +109,7 @@ Fecha Modificacion: 13/10/2021 -->
                             Departamento de nuestra base de datos. (IMPORTAR). El fichero importado se encuentra en el
                             directorio .../tmp/ del servidor.</p>
                     </td>
-                    <td class="no_hecho">
+                    <td class="hecho">
                         <a href="./codigoPHP/ejercicio07PDO.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>
                     <td>
                         <a href="./mostrarCodigo/ejercicio07PDO.php"> <img class="img" alt="Codigo" src="./webroot/img/codigo.png" /></a>
