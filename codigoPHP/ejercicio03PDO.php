@@ -112,19 +112,7 @@ Fecha Modificacion: 09/11/2021 -->
                     $mydb = new PDO(HOST, USER, PASSWORD); // creo un objeto PDO con la conexion a la base de datos
 
                     $mydb->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // Establezco el atributo para la apariciopn de errores y le pongo el modo para que cuando haya un error se lance una excepcion
-                    /* $codDepartamento = $_REQUEST['CodDepartamento'];
-                      $sql = "SELECT * FROM Departamento";
-                      $consulta = $miDB->prepare($sql); // preparo la consulta
-
-                      $consulta->execute(); // ejecuto la consulta
-
-                      $registroConsulta = $consulta->fetchObject(); // Obtengo el primer registro de la consulta como un objeto
-                      while ($registroConsulta) { // recorro los registros que devuelve la consulta de la consulta
-                      if ($registroConsulta->CodDepartamento == strtoupper($_REQUEST['CodDepartamento'])) { // si hay algun codigo de departamento que coincida con lo que ha introducido el usuario
-                      $aErrores['CodDepartamento'] = "El código de Departamento introducido ya existe"; // meto un mensaje de error en el array de errores del codigo del departamento
-                      }
-                      $registroConsulta = $consulta->fetchObject();  // guardo el registro actual como un objeto y avanzo el puntero al siguiente registro de la consulta
-                      } */
+                    
                     //Con Where en la consulta
                     $sql = "SELECT CodDepartamento FROM Departamento WHERE CodDepartamento='{$_REQUEST['CodDepartamento']}'";
                     $consulta = $mydb->prepare($sql);
@@ -157,7 +145,7 @@ Fecha Modificacion: 09/11/2021 -->
         }
 
         if ($entradaOK) { // si la entrada esta bien recojo los valores introducidos y hago su tratamiento
-            $aRespuestas['CodDepartamento'] = strtoupper($_REQUEST['CodDepartamento']); // strtoupper() transforma los caracteres de un string a mayuscula
+            $aRespuestas['CodDepartamento'] = $_REQUEST['CodDepartamento']; 
             $aRespuestas['DescDepartamento'] = $_REQUEST['DescDepartamento'];
             $aRespuestas['VolumenNegocio'] = $_REQUEST['VolumenNegocio'];
 
@@ -176,7 +164,6 @@ Fecha Modificacion: 09/11/2021 -->
                 $mydb = new PDO(HOST, USER, PASSWORD); // creo un objeto PDO con la conexion a la base de datos
 
                 $mydb->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // Establezco el atributo para la apariciopn de errores y le pongo el modo para que cuando haya un error se lance una excepcion
-
 
 
                 $sql2 = <<<CONSULTA
