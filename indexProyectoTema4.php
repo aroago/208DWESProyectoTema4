@@ -133,11 +133,9 @@ Fecha Modificacion: 13/10/2021 -->
                 </tr>
 
                 <tr>
-                    <td><p>9. Aplicación resumen MtoDeDepartamentosTema4. (Incluir PHPDoc y versionado en el repositorio
-                            GIT)</p>
-                    </td>
+                    <td><p>9. Aplicación resumen MtoDeDepartamentosTema4. (Incluir PHPDoc y versionado en el repositorio GIT)</p></td>
                     <td class="no_hecho">
-                        <a href="./codigoPHP/ejercicio08PDO.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>
+                        <a href="../208DWESMtoDepartamentosTema4/indexProyectoMtoDepartamento.php"><img class="img" alt="Play" target="_blank" src="./webroot/img/play.png" /></a></td>
                     <td>
                         <a type="application/github" href="https://github.com/aroago/208DWESMtoDepartamentosTema4.git" target="_blank">
                             <img class="iconoIMG" alt="gitHub" src="./webroot/img/github.png" />
