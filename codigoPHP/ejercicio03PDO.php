@@ -71,12 +71,18 @@ Fecha Modificacion: 09/11/2021 -->
     <body>
         <div class="topnav">
             <a href="../indexProyectoTema4.php">&#8666;</a>
-            <a href="../../index.php">&#127968;</a>
             <a href="https://github.com/aroago">GitHub</a>
             <a href="../mostrarCodigo/ejercicio03PDO.php">Codigo</a>
+             <a href="../../index.php">&#127968;</a>
         </div>
         <h2>Formulario e inserccion de datos en tabla</h2>
         <?php
+        /*
+         * @author: Aroa Granero Omañas
+         * @version: v1
+         * Created on: 08/11/2021
+         * Last modification: 09/11/2021
+         */
         require_once '../core/210322ValidacionFormularios.php'; // incluyo la libreria de validacion para validar los campos de formulario
         require_once '../config/confDBPDO.php';
 

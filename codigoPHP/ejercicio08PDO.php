@@ -51,11 +51,18 @@ Fecha Modificacion: 11/11/2021 -->
     <body>
 <div class="topnav">
         <a href="../indexProyectoTema4.php">&#8666;</a>
-        <a href="../../index.php">&#127968;</a>
         <a href="https://github.com/aroago">GitHub</a>
         <a href="../mostrarCodigo/ejercicio08PDO.php">Codigo</a>
+        <a href="../../index.php">&#127968;</a>
     </div>
-        <?php
+        <?php 
+        /*
+         * @author: Aroa Granero Omañas
+         * @version: v1
+         * Created on: 11/11/2021
+         * Last modification: 11/11/2021
+         */
+        
         /* 8. Página web que toma datos (código y descripción) de la tabla Departamento y guarda en un
           fichero departamento.xml. (COPIA DE SEGURIDAD / EXPORTAR). El fichero exportado se
           encuentra en el directorio .../tmp/ del servidor.
@@ -72,7 +79,7 @@ Fecha Modificacion: 11/11/2021 -->
             $mydb = new PDO(HOST, USER, PASSWORD); //Establecer una conexión con la base de datos 
             $mydb->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             
-            $consulta = "SELECT * FROM Departamento"; //Guardamos en la variable la consulta que queremos hacer
+            $consulta = 'SELECT * FROM Departamento'; //Guardamos en la variable la consulta que queremos hacer
             $resultadoConsulta = $mydb->prepare($consulta); //Preparamos la consulta
             $resultadoConsulta->execute();
 
@@ -80,35 +87,35 @@ Fecha Modificacion: 11/11/2021 -->
             $archivoXML->formatOutput = true;
 
 
-            $oDepartamentos = $archivoXML->createElement("departamentos");
-            $nodoDepartamentos = $archivoXML->appendChild($oDepartamentos);
+            $oElemDepartamentos = $archivoXML->createElement("departamentos");
+            $nodoDepartamentos = $archivoXML->appendChild($oElemDepartamentos);
 
 
             $oDepartamento = $resultadoConsulta->fetchObject();
 
-            while ($oDepartamento) {
-                // Creación del elemento departamento.
-                $oDepartamento = $archivoXML->createElement("departamento");
-                $nodoDepartamentos->appendChild($oDepartamento);
-
-                // Creación y añadido de la información sobre el departamento.
-                $oElemCodigo = $archivoXML->createElement('codDepartamento', $oDepartamento->codDepartamento);
-                $oDepartamento->appendChild($oElemCodigo);
-
-                $oElemCodigo = $archivoXML->createElement('descDepartamento', $oDepartamento->descDepartamento);
-                $oDepartamento->appendChild($oElemCodigo);
-
-                $oElemCodigo = $archivoXML->createElement('fechaBaja', $oDepartamento->fechaBaja);
-                $oDepartamento->appendChild($oElemCodigo);
-
-                $oElemCodigo = $archivoXML->createElement('volumenNegocio', $oDepartamento->volumenNegocio);
-                $oDepartamento->appendChild($oElemCodigo);
-
-                $oDepartamento = $resultadoConsulta->fetchObject();
-            }
-              $timestamp = new DateTime();//creamos el timeStamp para el nombre del fichero.
+            while($oDepartamento){
+                    // Creación del elemento departamento.
+                    $oElemDepartamento = $archivoXML->createElement("departamento");
+                    $nodoDepartamentos->appendChild($oElemDepartamento);
+                    
+                    // Creación y añadido de la información sobre el departamento.
+                    $oElemCodigo = $archivoXML->createElement('CodDepartamento', $oDepartamento->CodDepartamento);
+                    $oElemDepartamento->appendChild($oElemCodigo);
+                    
+                    $oElemCodigo = $archivoXML->createElement('DescDepartamento', $oDepartamento->DescDepartamento);
+                    $oElemDepartamento->appendChild($oElemCodigo);
+                    
+                    $oElemCodigo = $archivoXML->createElement('FechaBaja', $oDepartamento->FechaBaja);
+                    $oElemDepartamento->appendChild($oElemCodigo);
+                    
+                    $oElemCodigo = $archivoXML->createElement('VolumenNegocio', $oDepartamento->VolumenNegocio);
+                    $oElemDepartamento->appendChild($oElemCodigo);
+                    
+                    $oDepartamento = $resultadoConsulta->fetchObject();
+                }
+                
             // Guardado del archivo.
-            echo"El archivo se ha rellenado con: ". $archivoXML->save('../tmp/'.$timestamp->getTimestamp().'.xml')." bytes";
+            echo '<div>Se han escrito '.$archivoXML->save('../tmp/departamento.xml').' bytes</div>';
         } catch (PDOException $miExceptionPDO) {
             echo "<h1 style='color=red;'>No se pudo exportar el archivo</h1>";
             //mensaje de salida 

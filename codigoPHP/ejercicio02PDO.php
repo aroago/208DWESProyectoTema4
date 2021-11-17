@@ -49,9 +49,9 @@
     <body>
         <div class="topnav">
         <a href="../indexProyectoTema4.php">&#8666;</a>
-        <a href="../../index.php">&#127968;</a>
         <a href="https://github.com/aroago">GitHub</a>
         <a href="../mostrarCodigo/ejercicio02PDO.php">Codigo</a>
+        <a href="../../index.php">&#127968;</a>
     </div>
         <?php
         /*
