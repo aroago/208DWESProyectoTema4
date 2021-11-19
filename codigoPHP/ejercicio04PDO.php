@@ -146,8 +146,9 @@ Fecha Modificacion: 10/11/2021 -->
                     echo (isset($_REQUEST['DescDepartamento'])) ? $_REQUEST['DescDepartamento'] : ""; // si el campo esta correcto mantengo su valor en el formulario
                     ?>">                              
                 </div> 
+                <input id="btnEnviar" type="submit" value="Buscar" name="Enviar">
             </fieldset>
-            <input id="btnEnviar" type="submit" value="Insertar" name="Enviar">
+            
         </form>
 
     </body>
