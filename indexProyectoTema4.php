@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--Aroa Granero Oma�as 
-Fecha Creacion: 30/11/2021
-Fecha Modificacion: 13/10/2021 -->
+Fecha Creacion: 13/10/2021
+Fecha Modificacion: 22/11/2021 -->
 <html lang="es">
     <head>
         <meta charset="UTF-8">
@@ -24,6 +24,24 @@ Fecha Modificacion: 13/10/2021 -->
 
             <table>
                 <tr>
+                    <td><p>Fichero CrearBD<p></td>
+                     <td colspan="4">
+                         <a href="./mostrarCodigo/mostrarCrearExplotacion.php"><img class="img" alt="Codigo" src="./webroot/img/codigo.png" /></a>
+                    <td>
+                </tr>
+                <tr>
+                    <td><p>Fichero CargaBD</p></td>
+                     <td colspan="4">
+                         <a href="./mostrarCodigo/mostrarCargaInicialExplotacion.php"><img class="img" alt="Codigo" src="./webroot/img/codigo.png" /></a>
+                    <td>
+                </tr>
+                <tr>
+                    <td><p>Fichero BorrarBD<p></td>
+                     <td colspan="4">
+                         <a href="./mostrarCodigo/mostrarBorrarExplotacion.php"><img class="img" alt="Codigo" src="./webroot/img/codigo.png" /></a>
+                     <td>
+                </tr>
+                <tr>
                     <td></td>
                     <td colspan="2">PDO</td>
                     <td colspan="2">MySQLi</td>
@@ -40,7 +58,7 @@ Fecha Modificacion: 13/10/2021 -->
                     <td class="hecho">
                         <a href="./codigoPHP/ejercicio01PDO.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>
                     <td>
-                        <a href="./mostrarCodigo/ejercicio01PDO.php"> <img class="img" alt="Codigo" src="./webroot/img/codigo.png" /></a>
+                        <a href="./mostrarCodigo/ejercicio01PDO.php"><img class="img" alt="Codigo" src="./webroot/img/codigo.png" /></a>
                     </td>
                     <td class="hecho">
                         <a href="./codigoPHP/ejercicio01MySQLi.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>

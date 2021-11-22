@@ -4,18 +4,18 @@
  * Fichero de configuracion que contiene la conexion a la base de datos MySQL
  * @author Aroa Granero Omañas
  * Fecha Creacion:  05/11/2021
- * Última modificación: 05/11/2021
+ * Última modificación: 19/11/2021
  */
 
 //ENTORNO DESARROLLO CLASE
 /* IP del servidor */
-//define("DB", "DB208DWESProyectoTema4");
+define("DB", "DB208DWESProyectoTema4");
 /* Usuario con el que se conecta */
-//define("USER", "User208DWESProyectoTema4");
+define("USER", "User208DWESProyectoTema4");
 /* Contraseña con la que conectarse a la base de datos */
-//define("PASSWORD", "P@ssw0rd");
+define("PASSWORD", "P@ssw0rd");
 /*Nombre de la base de datos*/
-//define("HOST", "DAW208.sauces.local");
+define("HOST", "DAW208.sauces.local");
 
 //ENTORNO DESARROLLO CASA
 /* IP del servidor */
@@ -29,12 +29,12 @@
 
 //ENTORNO EXPLOTACION CLASE
 /*Nombre de la base de datos*/
-define("HOST", "db5005797519.hosting-data.io");
+//define("HOST", "db5005797519.hosting-data.io");
 /* IP del servidor */
-define("DB", "dbs4868804");
+//define("DB", "dbs4868804");
 /* Usuario con el que se conecta */
-define("USER", "dbu2267576");
+//define("USER", "dbu2267576");
 /* Contraseña con la que conectarse a la base de datos */
-define("PASSWORD", "dbs4868804");
+//define("PASSWORD", "dbs4868804");
 
 ?>

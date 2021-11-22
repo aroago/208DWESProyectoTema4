@@ -9,7 +9,7 @@ Fecha Modificacion: 11/11/2021 -->
     <head>
         <meta charset="UTF-8">
         <meta name="author" content="aroaGraneroOmañas">
-        <title>ejercicio 05 PDO</title>
+        <title>ejercicio 06 PDO</title>
         <style>
 
 

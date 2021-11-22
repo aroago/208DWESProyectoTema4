@@ -1,14 +1,11 @@
 
-/* Usar base de datos dbs4868804*/
-
-USE dbs4868804;
-
 <?php
+
 /*
  * Configuracion  ENTORNO EXPLOTACION 1&1
  * @author Aroa Granero Omañas
  * Fecha Creacion:  19/11/2021
- * Última modificación: 19/11/2021
+ * Última modificación: 22/11/2021
  *  Crear tabla Departamento con los campos (PK)CodDepartamento (3 letras mayusculas), 
  *  DescDepartamento (max. 255 caracteres),FechaBaja, VolumenNegocio (float-€)
  */
@@ -19,7 +16,9 @@ try {
     $mydb = new PDO(HOST, USER, PASSWORD);
     $mydb->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //Configuramos las excepciones
     // Array de atributos de la conexión.
+    /* Usar base de datos dbs4868804*/
     $sql = <<<SQL
+    USE dbs4868804;
     CREATE TABLE Departamento (
     CodDepartamento VARCHAR(3) PRIMARY KEY,
     DescDepartamento VARCHAR(255) NOT NULL,
@@ -29,6 +28,7 @@ try {
     SQL;
 
     echo "<h3>Conexion Establecida con Exito</<h3>";
+    $mydb->exec($sql); //Ejecuto la consulta
 } catch (PDOException $excepcion) {//Código que se ejecutará si se produce alguna excepción
     //Almacenamos el código del error de la excepción en la variable $errorExcepcion
     $errorExcep = $excepcion->getCode();
