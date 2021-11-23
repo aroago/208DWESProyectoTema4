@@ -35,6 +35,6 @@ define("HOST", "DAW208.sauces.local");
 /* Usuario con el que se conecta */
 //define("USER", "dbu2267576");
 /* Contraseña con la que conectarse a la base de datos */
-//define("PASSWORD", "dbs4868804");
+//define("PASSWORD", "daw2_Sauces");
 
 ?>

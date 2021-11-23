@@ -16,13 +16,13 @@ try {
     $mydb->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     //Consulta para realizar la insercion de los datos a partir del archivo xml
-    $sql = <<<CONSULTA
-                DROP TABLE IF EXISTS dbs4868804.Departamento;
-                CONSULTA;
+  
+    $consulta = $mydb->prepare(<<<QUERY
+                        DROP TABLE IF EXISTS Departamento;
+                    QUERY);
+                $consulta->execute();
 
-    $mydb->exec($sql); //Ejecuto la consulta
-
-    echo '<a class="exitoInsercion">Tabla creada con éxito.</a>';
+    echo '<a class="exitoInsercion">Tabla borrada con éxito.</a>';
 } catch (PDOException $excepcion) {//Codigo que se ejecuta si hay algun error
     $errorExcepcion = $excepcion->getCode(); //Obtengo el codigo del error y lo almaceno en la variable errorException
     $mensajeException = $excepcion->getMessage(); //Obtengo el mensaje del error y lo almaceno en la variable mensajeException

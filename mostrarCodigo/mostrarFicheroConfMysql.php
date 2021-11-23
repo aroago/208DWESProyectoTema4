@@ -10,7 +10,7 @@ Fecha Modificacion: 22/11/2021 -->
     <head>
         <meta charset="UTF-8">
         <meta name="author" content="aroaGraneroOmañas">
-        <title>CreaDAW208DBDepartamentosExplotacion</title>
+        <title>Mostrar fichero Conf MySQL</title>
         <style>
             /* Add a black background color to the top navigation */
             .topnav {
@@ -46,7 +46,7 @@ Fecha Modificacion: 22/11/2021 -->
             <a href="https://github.com/aroago">GitHub</a>
         </div>
         <?php
-        highlight_file("../scriptBD/CreaDAW208DBDepartamentosExplotacion.php");
+        highlight_file("../config/confDBMySQL.php");
         ?>
     </body>
 </html>
