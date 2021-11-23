@@ -4,17 +4,16 @@
  * Fichero de configuracion que contiene la conexion a la base de datos PDO
  * @author Aroa Granero Omañas
  * Fecha Creacion:  05/11/2021
- * Última modificación: 05/11/2021
+ * Última modificación: 19/11/2021
  */
 
-//ENTORNO DESARROLLO CLASE
-
+//ENTORNO EXPLOTACION CLASE
 /* IP del servidor y Nombre de la base de datos*/
-//define("HOST", "mysql:dbname=DAW208DBDepartamentos;host=192.168.3.108");
+//define("HOST", "mysql:dbname=dbs4868804;host=db5005797519.hosting-data.io");
 /* Usuario con el que se conecta */
-//define("USER", "usuarioDAW208DBDepartamentos");
+//define("USER", "dbu2267576");
 /* Contraseña con la que conectarse a la base de datos */
-//define("PASSWORD", "P@ssw0rd");
+//define("PASSWORD", "daw2_Sauces");
 
 //ENTORNO DESARROLLO CASA
 /* IP del servidor y Nombre de la base de datos*/
@@ -33,3 +32,4 @@ define("USER", "User208DWESProyectoTema4");
 /* Contraseña con la que conectarse a la base de datos */
 define("PASSWORD", "P@ssw0rd");
 ?>
+

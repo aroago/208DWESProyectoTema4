@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--Aroa Granero Oma�as 
-Fecha Creacion: 30/11/2021
-Fecha Modificacion: 13/10/2021 -->
+Fecha Creacion: 13/10/2021
+Fecha Modificacion: 22/11/2021 -->
 <html lang="es">
     <head>
         <meta charset="UTF-8">
@@ -24,9 +24,43 @@ Fecha Modificacion: 13/10/2021 -->
 
             <table>
                 <tr>
+                    <td><p>Fichero CrearBD<p></td>
+                    <td colspan="2" class="hecho">
+                        <a href="./scriptBD/CreaDAW208DBDepartamentosExplotacion.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>
+                    <td colspan="2">
+                        <a href="./mostrarCodigo/mostrarCrearExplotacion.php"><img class="img" alt="Codigo" src="./webroot/img/codigo.png" /></a>
+                    <td>
+                </tr>
+                <tr>
+                    <td><p>Fichero CargaBD</p></td>
+                    <td colspan="2" class="hecho">
+                        <a href="./scriptBD/CargaInicialDAW208DBDepartamentosExplotacion.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>
+                    <td colspan="2">
+                        <a href="./mostrarCodigo/mostrarCargaInicialExplotacion.php"><img class="img" alt="Codigo" src="./webroot/img/codigo.png" /></a>
+                    <td>
+                </tr>
+                <tr>
+                    <td><p>Fichero BorrarBD<p></td>
+                    <td colspan="2" class="hecho">
+                        <a href="./scriptBD/BorraDAW208DBDepartamentosExplotacion.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>
+                    <td colspan="2">
+                        <a href="./mostrarCodigo/mostrarBorrarExplotacion.php"><img class="img" alt="Codigo" src="./webroot/img/codigo.png" /></a>
+                    <td>
+                </tr>
+
+                <tr>
                     <td></td>
                     <td colspan="2">PDO</td>
                     <td colspan="2">MySQLi</td>
+                </tr>
+                <tr>
+                    <td><p>Archivos de configuracion, configDBPDO y configDBMySQLI.<p></td>
+                    <td colspan="2">
+                        <a href="./mostrarCodigo/mostrarFicheroConfPDO.php"><img class="img" alt="Codigo" src="./webroot/img/codigo.png" /></a>
+                    </td>
+                    <td colspan="2">
+                        <a href="./mostrarCodigo/mostrarFicheroConfMysql.php"><img class="img" alt="Codigo" src="./webroot/img/codigo.png" /></a>
+                    <td>
                 </tr>
                 <tr>
                     <td>EJERCICIOS</td>
@@ -40,7 +74,7 @@ Fecha Modificacion: 13/10/2021 -->
                     <td class="hecho">
                         <a href="./codigoPHP/ejercicio01PDO.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>
                     <td>
-                        <a href="./mostrarCodigo/ejercicio01PDO.php"> <img class="img" alt="Codigo" src="./webroot/img/codigo.png" /></a>
+                        <a href="./mostrarCodigo/ejercicio01PDO.php"><img class="img" alt="Codigo" src="./webroot/img/codigo.png" /></a>
                     </td>
                     <td class="hecho">
                         <a href="./codigoPHP/ejercicio01MySQLi.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>
@@ -133,11 +167,9 @@ Fecha Modificacion: 13/10/2021 -->
                 </tr>
 
                 <tr>
-                    <td><p>9. Aplicación resumen MtoDeDepartamentosTema4. (Incluir PHPDoc y versionado en el repositorio
-                            GIT)</p>
-                    </td>
+                    <td><p>9. Aplicación resumen MtoDeDepartamentosTema4. (Incluir PHPDoc y versionado en el repositorio GIT)</p></td>
                     <td class="no_hecho">
-                        <a href="./codigoPHP/ejercicio08PDO.php"><img class="img" alt="Play" src="./webroot/img/play.png" /></a></td>
+                        <a href="../208DWESMtoDepartamentosTema4/indexProyectoMtoDepartamento.php"><img class="img" alt="Play" target="_blank" src="./webroot/img/play.png" /></a></td>
                     <td>
                         <a type="application/github" href="https://github.com/aroago/208DWESMtoDepartamentosTema4.git" target="_blank">
                             <img class="iconoIMG" alt="gitHub" src="./webroot/img/github.png" />
