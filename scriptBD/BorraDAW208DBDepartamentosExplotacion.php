@@ -6,7 +6,7 @@
  * Última modificación: 22/11/2021
  */
 //Incluyo las variables de la conexion
-require_once '../config/configDBPDO.php';
+require_once '../config/confDBPDO.php';
 
 try {
     //Hago la conexion con la base de datos

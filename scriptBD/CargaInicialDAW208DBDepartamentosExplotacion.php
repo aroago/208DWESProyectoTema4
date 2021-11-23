@@ -4,10 +4,10 @@
  * Configuracion  ENTORNO EXPLOTACION 1&1
  * @author Aroa Granero Omañas
  * Fecha Creacion:  19/11/2021
- * Última modificación: 22/11/2021
+ * Última modificación: 23/11/2021
  */
 //Incluyo las variables de la conexion
-require_once '../config/configDBPDO.php';
+require_once '../config/confDBPDO.php';
 
 try {
     //Hago la conexion con la base de datos
@@ -16,15 +16,14 @@ try {
     // Establezco el atributo para la aparicion de errores con ATTR_ERRMODE y le pongo que cuando haya un error se lance una excepcion con ERRMODE_EXCEPTION
     $mydb->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $consulta = $mydb->prepare(<<<QUERY
-                      INSERT INTO Departamento(CodDepartamento,DescDepartamento,FechaBaja, VolumenNegocio) VALUES
-        ('INF', 'Departamento de informatica',null, 80),
-        ('LEN', 'Departamento de lengua',null, 1000),
-        ('ING', 'Departamento de Inglés',null, 3000),
-        ('MAT', 'Departamento de matematicas',null, 2000)
-                    QUERY);
-    $consulta->execute();
-    echo '<a class="exitoInsercion">Tabla creada con éxito.</a>';
+    $sql=<<<PDO
+            INSERT INTO Departamento (CodDepartamento, DescDepartamento, FechaBaja, VolumenNegocio) VALUES 
+            ('INF', 'Departamento de informatica', null, 1000.0),
+            ('CIE', 'Departamento de ciencia', null, 2000.0),
+            ('HIS', 'Departamento de historia', null, 1000.0);
+        PDO;
+    $mydb->exec($sql);
+    echo '<a class="exitoInsercion">Inserccion en la Tabla creada con éxito.</a>';
 } catch (PDOException $excepcion) {//Codigo que se ejecuta si hay algun error
     $errorExcepcion = $excepcion->getCode(); //Obtengo el codigo del error y lo almaceno en la variable errorException
     $mensajeException = $excepcion->getMessage(); //Obtengo el mensaje del error y lo almaceno en la variable mensajeException
