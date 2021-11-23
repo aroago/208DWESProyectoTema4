@@ -20,4 +20,4 @@ CREATE USER 'User208DWESProyectoTema4'@'%' identified BY 'P@ssw0rd';
 
 /* Dar permisos al usuario usuarioDAW208DBDepartamentos*/
 
-GRANT ALL PRIVILEGES ON DB208DWESProyectoTema4.* TO 'User208DWESProyectoTema4'@'%' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON DB208DWESProyectoTema4.* TO 'User208DWESProyectoTema4'@'%';
